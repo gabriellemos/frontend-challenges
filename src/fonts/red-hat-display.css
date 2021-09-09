@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url(./RedHadDisplay/RedHatDisplay-Bold.ttf) format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url(./RedHadDisplay/RedHatDisplay-Black.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url(./RedHadDisplay/RedHatDisplay-Medium.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

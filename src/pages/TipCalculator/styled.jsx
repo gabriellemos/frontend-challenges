@@ -4,8 +4,6 @@ import bgDesktop from './images/pattern-background-desktop.svg'
 import bgMobile from './images/pattern-background-mobile.svg'
 
 export const Container = styled.div`
-  font-family: 'Red Hat Display', sans-serif;
-
   width: 100vw;
   height: 100vh;
   display: flex;
