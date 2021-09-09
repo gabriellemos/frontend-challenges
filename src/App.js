@@ -1,11 +1,11 @@
 import './App.css'
 
-import OrderSummary from './pages/OrderSummary'
+import Router from './pages/Router'
 
 function App() {
   return (
     <div className="App">
-      <OrderSummary />
+      <Router />
     </div>
   )
 }
