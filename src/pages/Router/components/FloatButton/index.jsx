@@ -1,6 +1,8 @@
 import React from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+
 import { FloatingBack } from './styled'
 
 export default () => {
@@ -11,6 +13,8 @@ export default () => {
     return <React.Fragment />
   }
   return (
-    <FloatingBack onClick={() => history.push('/')}/>
+    <FloatingBack onClick={() => history.push('/')}>
+      <ArrowBackIcon />
+    </FloatingBack>
   )
 }
