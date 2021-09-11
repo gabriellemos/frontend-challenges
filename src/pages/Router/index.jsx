@@ -8,6 +8,7 @@ import {
 
 import Home from '../Home'
 import OrderSummary from '../OrderSummary'
+import TipCalculator from '../TipCalculator'
 
 import FloatButton from './components/FloatButton'
 
@@ -15,6 +16,9 @@ export default () => {
   return (
     <Router>
       <Switch>
+        <Route path="/tip-calculator" exact>
+          <TipCalculator />
+        </Route>
         <Route path="/order-summary" exact>
           <OrderSummary />
         </Route>
