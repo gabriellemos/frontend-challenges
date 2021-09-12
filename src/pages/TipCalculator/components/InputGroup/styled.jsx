@@ -21,7 +21,7 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex: 100%;
+    width: 100%;
 
     height: 48px;
     background: #f3f9fa;
@@ -39,6 +39,7 @@ export const Container = styled.div`
       font-size: 24px;
       font-weight: 700;
       color: #00474b;
+      box-sizing: border-box;
 
       &:focus {
         outline: none;

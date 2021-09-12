@@ -24,15 +24,20 @@ export const MainContent = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     margin: 40px 0;
+    gap: 16px 14px;
 
     > * {
       flex: 33.33%;
+      max-width: 117px;
     }
 
-    label {
+    > label {
       flex: 100%;
+      max-width: none;
       text-align: start;
-      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #5e7a7d;
     }
   }
 `

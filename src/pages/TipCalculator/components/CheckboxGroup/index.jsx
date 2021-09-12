@@ -1,11 +1,13 @@
 import React from 'react'
 
-const CheckboxGroup = ({ id, children, ...props }) => {
+import * as Styled from './styled'
+
+const CheckboxGroup = ({ id, children, checked, ...props }) => {
   return (
-    <div>
+    <Styled.Container className={checked ? 'active' : null}>
       <label htmlFor={id}>{children}</label>
       <input {...props} id={id} type="checkbox" />
-    </div>
+    </Styled.Container>
   )
 }
 

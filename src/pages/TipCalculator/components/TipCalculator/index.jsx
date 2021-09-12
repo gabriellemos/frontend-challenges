@@ -7,8 +7,9 @@ import PriceDisplay from '../PriceDisplay'
 
 import IconDollar from '../../images/icon-dollar.svg'
 import IconPerson from '../../images/icon-person.svg'
-import withFormatter from '../InputGroup/withFormatter'
-import withPattern from '../InputGroup/withPattern'
+import withFormatter from '../../../../components/Input/withFormatter'
+import withPattern from '../../../../components/Input/withPattern'
+import CustomTip from '../CustomTip'
 
 const NumberInput = withPattern(InputGroup, /\D/gi)
 const BillInput = withFormatter(NumberInput, (value) => {
@@ -18,6 +19,7 @@ const BillInput = withFormatter(NumberInput, (value) => {
 const TipCalculator = () => {
   const [bill, setBill] = useState('')
   const [splitWith, setSplitWith] = useState('')
+  const [customTip, setCustomTip] = useState('')
 
   return (
     <Styled.Container>
@@ -26,25 +28,23 @@ const TipCalculator = () => {
           label="Bill"
           placeholder="0"
           icon={IconDollar}
-          onChange={setBill}
+          setValue={setBill}
           value={bill}
         />
         <div className="selector-tip">
           <label>Selected Tip %</label>
           <CheckboxGroup id="5percent">5%</CheckboxGroup>
           <CheckboxGroup id="10percent">10%</CheckboxGroup>
-          <CheckboxGroup id="15percent">15%</CheckboxGroup>
+          <CheckboxGroup id="15percent" checked>15%</CheckboxGroup>
           <CheckboxGroup id="25percent">25%</CheckboxGroup>
           <CheckboxGroup id="50percent">50%</CheckboxGroup>
-          <div>
-            <input />
-          </div>
+          <CustomTip value={customTip} setValue={setCustomTip}/>
         </div>
         <NumberInput
           label="Number of People"
           placeholder="0"
           icon={IconPerson}
-          onChange={setSplitWith}
+          setValue={setSplitWith}
           value={splitWith}
         />
       </Styled.MainContent>

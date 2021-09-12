@@ -1,18 +1,15 @@
 import React from 'react'
 
+import Input from '../../../../components/Input'
 import * as Styled from './styled'
 
-const InputGroup = ({ label, icon, pattern, formatter, onChange, ...props }) => {
-  const handleChange = (evt) => {
-    onChange(evt.target.value)
-  }
-
+const InputGroup = ({ label, icon, ...props }) => {
   return (
     <Styled.Container>
-      <label>{label}</label>
+      {label && <label>{label}</label>}
       <div className="input-container">
         <img src={icon} />
-        <input {...props} onChange={handleChange} />
+        <Input {...props} />
       </div>
     </Styled.Container>
   )
