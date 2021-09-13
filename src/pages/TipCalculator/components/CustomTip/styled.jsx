@@ -25,6 +25,7 @@ export const Container = styled.div`
 
     &:focus {
       outline: none;
+      cursor: text;
     }
   }
 `
